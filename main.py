@@ -13,7 +13,6 @@ args = {'H': 100, 'rho2': 1000, 'tp': 30.345, 'uup': 58 / sqrt(g * 100), 'mup': 
 def plot_func(time):
     t = np.arange(0.0, time, 0.5)
     s = [clib.lift_force_landing(i, args) for i in t]
-    # s = 1 + np.sin(2 * np.pi * t)
     plt.plot(t, s)
 
     plt.xlabel('time (s)')
